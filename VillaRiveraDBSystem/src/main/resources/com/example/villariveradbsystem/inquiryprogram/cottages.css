@@ -1,0 +1,22 @@
+.button{
+    -fx-background-color: #f9ecdc;
+    -fx-text-fill:  #101010;
+    -fx-alignment: center;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-pref-width: 30;
+    -fx-pref-height: 30;
+    -fx-opacity: 50%;
+}
+
+.button:hover{
+    -fx-opacity: 100%;
+}
+
+.label{
+    -fx-text-fill:  f9ecdc;
+    -fx-background-color:  #35291f;
+    -fx-alignment: center;
+    -fx-pref-width: 32;
+    -fx-pref-height: 32;
+}

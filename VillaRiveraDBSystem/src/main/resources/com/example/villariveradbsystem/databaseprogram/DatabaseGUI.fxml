@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.villariveradbsystem.databasegui.DatabaseController">
+    <children>
+      <VBox prefHeight="540.0" prefWidth="210.0" style="-fx-background-color: #35291f;">
+         <children>
+            <AnchorPane prefHeight="121.0" prefWidth="211.0">
+               <children>
+                  <ImageView fitHeight="97.0" fitWidth="194.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="115.0" fitWidth="120.0" layoutX="45.0">
+                     <image>
+                        <Image url="@../inquiryprogram/Images/Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="90.0" prefWidth="210.0">
+               <children>
+                  <Button fx:id="buttonEdit" graphicTextGap="0.0" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonEditOnAction" prefHeight="36.0" prefWidth="100.0" stylesheets="@database.css" text="Edit" textFill="#94918e">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonDelete" layoutX="110.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonDeleteOnAction" prefHeight="36.0" prefWidth="100.0" stylesheets="@database.css" text="Delete" textFill="#94918e">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="90.0" prefWidth="69.0">
+               <children>
+                  <Button fx:id="buttonSearch" layoutX="5.0" mnemonicParsing="false" onAction="#buttonSearchOnAction" prefHeight="36.0" prefWidth="109.0" stylesheets="@database.css" text="Search">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textfieldSearch" layoutX="85.0" layoutY="7.0" prefHeight="26.0" prefWidth="110.0" promptText="Firstname Lastname" stylesheets="@database.css" />
+                  <Line fx:id="lineSearch" endX="65.20001220703125" endY="-5.7220458984375E-6" layoutX="136.0" layoutY="32.0" startX="-52.400001525878906" startY="-5.7220458984375E-6" stroke="#94918e" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="90.0" prefWidth="210.0">
+               <children>
+                  <Button fx:id="buttonFilter" layoutX="5.0" mnemonicParsing="false" onAction="#buttonFilterOnAction" prefHeight="36.0" prefWidth="109.0" stylesheets="@database.css" text="Filter">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="choiceFilter1" layoutX="85.0" layoutY="6.0" prefHeight="26.0" prefWidth="105.0" />
+                  <ChoiceBox fx:id="choiceFilter2" layoutX="85.0" layoutY="36.0" prefHeight="26.0" prefWidth="105.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="90.0" prefWidth="210.0">
+               <children>
+                  <Button fx:id="buttonSort" layoutX="5.0" mnemonicParsing="false" onAction="#buttonSortOnAction" prefHeight="36.0" prefWidth="122.0" stylesheets="@database.css" text="Sort by">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="choiceSort" layoutX="85.0" layoutY="6.0" prefHeight="26.0" prefWidth="105.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="48.0" prefWidth="210.0">
+               <children>
+                  <Button fx:id="buttonApply" layoutX="45.0" mnemonicParsing="false" onAction="#buttonApplyOnAction" prefHeight="27.0" prefWidth="122.0" stylesheets="@database.css" text="Apply" textFill="#f9ecdc">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="48.0" prefWidth="210.0">
+               <children>
+                  <Button fx:id="buttonRefresh" layoutX="45.0" mnemonicParsing="false" onAction="#buttonRefreshOnAction" prefHeight="27.0" prefWidth="122.0" stylesheets="@database.css" text="Refresh" textFill="#f9ecdc">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+        <ScrollPane layoutX="209.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="656.0">
+            <content>
+                <TableView fx:id="DATABASE" editable="true" prefHeight="806.0" prefWidth="1022.0">
+                    <columns>
+                        <TableColumn fx:id="FIRSTNAME" prefWidth="123.0" text="First Name" />
+                        <TableColumn fx:id="LASTNAME" prefWidth="100.0" text="Last Name" />
+                        <TableColumn fx:id="COUNT" prefWidth="42.0" text="Count" />
+                        <TableColumn fx:id="CONTACT_NUMBER" prefWidth="110.0" text="Contact Number" />
+                        <TableColumn fx:id="DATE" prefWidth="120.0" text="Date" />
+                        <TableColumn fx:id="TIME" prefWidth="120.0" text="Time" />
+                        <TableColumn fx:id="FRANCIS" prefWidth="50.0" text="Francis" />
+                        <TableColumn fx:id="SIMON" prefWidth="50.0" text="Simon" />
+                        <TableColumn fx:id="FATIMA" prefWidth="50.0" text="Fatima" />
+                        <TableColumn fx:id="MIGUEL" prefWidth="50.0" text="Miguel" />
+                        <TableColumn fx:id="GABRIEL" prefWidth="50.0" text="Gabriel" />
+                        <TableColumn fx:id="PAX2" prefWidth="50.0" text="2 PAX" />
+                        <TableColumn fx:id="PAX4" prefWidth="50.0" text="4 PAX" />
+                        <TableColumn fx:id="PAX10" prefWidth="50.0" text="10 PAX" />
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

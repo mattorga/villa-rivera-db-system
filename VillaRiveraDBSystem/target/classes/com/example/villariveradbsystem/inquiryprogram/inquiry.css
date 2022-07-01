@@ -1,0 +1,34 @@
+.text-field {
+    -fx-background-color: Transparent;
+    -fx-text-fill: #eaeae9;
+}
+
+.button:hover{
+    -fx-text-fill: #eaeae9;
+}
+
+#buttonSignout{
+    -fx-background-color: Transparent;
+}
+
+#buttonSubmit:hover{
+    -fx-opacity: 100;
+}
+
+#buttonUpdate:hover{
+    -fx-opacity: 100;
+}
+
+#buttonInquiry{
+    -fx-background-color: Transparent;
+    -fx-text-fill: #eaeae9;
+}
+
+#buttonDatabase{
+    -fx-background-color: Transparent;
+}
+
+#labelActivities{
+    -fx-font-size: 15;
+    -fx-text-fill: #94918e;
+}
